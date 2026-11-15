@@ -51,7 +51,12 @@ https://github.com/Epilouptique/doomname-extension
 **Langue** : Français
 
 **Icône** : `icons/icon-128.png`
-**Captures d'écran** : les trois fichiers de `docs/store/` (déjà au format 1280×800)
+**Captures d'écran** : `docs/store/01-onglet.png`, `02-recherche.png`, `03-reglages.png` (1280×800)
+**Petite image promotionnelle** (440×280) : `docs/store/promo-440x280.png`
+**Image promotionnelle en haut de page** (1400×560) : `docs/store/promo-1400x560.png`
+
+Les deux images promotionnelles sont en PNG 24 bits sans canal alpha, comme
+l'exige le Web Store. Régénérables par `python build/make-promo.py`.
 
 **URL de la page d'accueil** : `https://www.doomname.com`
 **URL d'assistance** : `https://www.doomname.com`
@@ -100,14 +105,16 @@ Seule destination réseau de l'extension : vérification WHOIS des domaines et g
 - **Code exécuté à distance** : répondre **Non, je n'utilise pas de code distant**.
   Tout le code est inclus dans le paquet, sans bundler ni minification.
 
-**Déclaration sur l'utilisation des données** — cocher :
+**Déclaration sur l'utilisation des données** — cocher exactement deux cases :
 
 - *Informations permettant d'identifier personnellement l'utilisateur* : OUI
   (l'adresse e-mail d'alerte saisie par l'utilisateur)
-- *Activité sur le site Web* : OUI
-  (le nom de domaine consulté, transmis au serveur pour la requête WHOIS)
-- Tout le reste : NON (santé, finances, authentification, communications
-  personnelles, localisation, historique web, contenu du site Web)
+- *Historique Web* : OUI
+  (le nom de domaine de la page consultée, transmis au serveur pour la requête
+  WHOIS — c'est l'équivalent Google du `browsingActivity` déclaré côté Firefox)
+- Tout le reste : NON — santé, finances, authentification, communications
+  personnelles, localisation, activité de l'utilisateur (clics, frappe,
+  mouvements de souris : l'extension n'en collecte aucun), contenu du site Web
 
 Puis cocher les trois certifications :
 - Je ne vends ni ne transfère ces données à des tiers, hors cas d'usage approuvés
