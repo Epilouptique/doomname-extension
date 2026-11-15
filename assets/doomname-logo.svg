@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- Fond carré arrondi gris doux -->
+  <rect width="500" height="500" rx="100" fill="#f0ede8"/>
+
+  <!-- Globe (icône web) centré -->
+  <!-- Cercle principal -->
+  <circle cx="250" cy="250" r="127" fill="none" stroke="#1a1a2e" stroke-width="10.5"/>
+  <!-- Ellipse méridien vertical -->
+  <ellipse cx="250" cy="250" rx="54" ry="127" fill="none" stroke="#1a1a2e" stroke-width="8.5"/>
+  <!-- Ligne équateur -->
+  <line x1="123" y1="250" x2="377" y2="250" stroke="#1a1a2e" stroke-width="8.5"/>
+
+  <!-- Viseur style L1 : grand cercle orange + traits courts cardinaux -->
+  <circle cx="250" cy="250" r="169" fill="none" stroke="#d97757" stroke-width="9.5"/>
+
+  <!-- Trait haut (externe au cercle viseur) -->
+  <line x1="250" y1="58" x2="250" y2="82" stroke="#d97757" stroke-width="13" stroke-linecap="round"/>
+  <!-- Trait bas -->
+  <line x1="250" y1="418" x2="250" y2="442" stroke="#d97757" stroke-width="13" stroke-linecap="round"/>
+  <!-- Trait gauche -->
+  <line x1="58" y1="250" x2="82" y2="250" stroke="#d97757" stroke-width="13" stroke-linecap="round"/>
+  <!-- Trait droite -->
+  <line x1="418" y1="250" x2="442" y2="250" stroke="#d97757" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- Point central orange -->
+  <circle cx="250" cy="250" r="13" fill="#d97757"/>
+</svg>

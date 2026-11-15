@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>DoomName — Réglages</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="head">
+      <img src="../icons/doomname-logo.svg" alt="" class="head-icon" />
+      <div>
+        <h1>DoomName</h1>
+        <p class="sub">Réglages de l'extension</p>
+      </div>
+    </header>
+
+    <section id="perm-card" class="card hidden">
+      <h2>Autorisation requise</h2>
+      <p class="desc">
+        L'extension a besoin d'accéder à <strong>doomname.com</strong> pour vérifier les
+        domaines et enregistrer vos alertes.
+      </p>
+      <button id="grant-perm" class="btn btn-primary">Autoriser l'accès</button>
+    </section>
+
+    <section class="card">
+      <h2>Adresse e-mail d'alerte</h2>
+      <p class="desc">Utilisez la même que sur doomname.com pour retrouver vos surveillances.</p>
+      <div class="row">
+        <input id="email" type="email" inputmode="email" spellcheck="false"
+               placeholder="vous@exemple.com" autocomplete="email" />
+        <button id="save-email" class="btn btn-primary">Enregistrer</button>
+      </div>
+      <p id="email-msg" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>Comportement</h2>
+
+      <label class="toggle">
+        <input id="auto-watch" type="checkbox" />
+        <span>
+          <strong>Clic sur l'icône = surveillance immédiate</strong>
+          <em>Le domaine de l'onglet actif est ajouté sans ouvrir le popup.</em>
+        </span>
+      </label>
+
+      <label class="toggle">
+        <input id="notify" type="checkbox" />
+        <span>
+          <strong>Notification système après un ajout</strong>
+        </span>
+      </label>
+
+      <div class="field">
+        <label for="theme"><strong>Thème</strong></label>
+        <select id="theme">
+          <option value="auto">Automatique (système)</option>
+          <option value="light">Clair</option>
+          <option value="dark">Sombre</option>
+        </select>
+      </div>
+
+      <p class="desc">
+        Raccourci clavier : <kbd>Alt</kbd> + <kbd>Maj</kbd> + <kbd>D</kbd> pour surveiller
+        le domaine de l'onglet actif.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Domaines surveillés</h2>
+        <button id="reload-subs" class="btn btn-ghost btn-sm">Actualiser</button>
+      </div>
+      <div id="subs" class="subs">
+        <p class="desc">Renseignez votre e-mail pour afficher vos surveillances.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Maintenance</h2>
+      <div class="row">
+        <button id="clear-cache" class="btn btn-ghost">Vider le cache des vérifications</button>
+        <button id="clear-history" class="btn btn-ghost">Effacer l'historique de recherche</button>
+      </div>
+      <p id="maint-msg" class="msg"></p>
+    </section>
+
+    <footer class="foot">
+      <a href="https://www.doomname.com" target="_blank" rel="noopener">doomname.com</a>
+      <span id="version"></span>
+    </footer>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

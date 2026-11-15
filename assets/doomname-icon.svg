@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 500 500"
+   width="500"
+   height="500"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="doomname-logo_extension_petit.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.57063517"
+     inkscape:cx="-36.801096"
+     inkscape:cy="163.8525"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <!-- Fond carré arrondi gris doux -->
+  <rect
+     width="500"
+     height="500"
+     rx="100"
+     fill="#f0ede8"
+     id="rect1"
+     style="fill:#d97757;fill-opacity:1"
+     x="0"
+     y="0" />
+  <!-- Globe (icône web) centré -->
+  <!-- Cercle principal -->
+  <!-- Ellipse méridien vertical -->
+  <!-- Ligne équateur -->
+  <!-- Viseur style L1 : grand cercle orange + traits courts cardinaux -->
+  <circle
+     cx="250"
+     cy="250"
+     r="169"
+     fill="none"
+     stroke="#d97757"
+     stroke-width="9.5"
+     id="circle2"
+     style="stroke:#f0ede8;stroke-opacity:1;stroke-width:38.07603455;stroke-dasharray:none" />
+  <!-- Trait haut (externe au cercle viseur) -->
+  <line
+     x1="248.76085"
+     y1="34.807396"
+     x2="248.76085"
+     y2="112.62756"
+     stroke="#d97757"
+     stroke-width="13"
+     stroke-linecap="round"
+     id="line2"
+     style="stroke:#f0ede8;stroke-width:45.0175;stroke-dasharray:none;stroke-opacity:1" />
+  <line
+     x1="251.81235"
+     y1="385.36502"
+     x2="251.81235"
+     y2="463.18518"
+     stroke="#d97757"
+     stroke-width="13"
+     stroke-linecap="round"
+     id="line2-5"
+     style="stroke:#f0ede8;stroke-width:45.0175;stroke-dasharray:none;stroke-opacity:1" />
+  <line
+     x1="458.72614"
+     y1="256.68399"
+     x2="380.90601"
+     y2="256.68399"
+     stroke="#d97757"
+     stroke-width="13"
+     stroke-linecap="round"
+     id="line2-9"
+     style="stroke:#f0ede8;stroke-width:45.0175;stroke-dasharray:none;stroke-opacity:1" />
+  <line
+     x1="117.90758"
+     y1="250.07381"
+     x2="40.087448"
+     y2="250.07381"
+     stroke="#d97757"
+     stroke-width="13"
+     stroke-linecap="round"
+     id="line2-9-2"
+     style="stroke:#f0ede8;stroke-width:45.0175;stroke-dasharray:none;stroke-opacity:1" />
+  <!-- Trait bas -->
+  <!-- Trait gauche -->
+  <!-- Trait droite -->
+  <!-- Point central orange -->
+  <circle
+     cx="248.04868"
+     cy="253.70378"
+     fill="#d97757"
+     id="circle5"
+     style="fill:#f0ede8;fill-opacity:1;stroke-width:19.2308;stroke-dasharray:none"
+     r="50" />
+</svg>
