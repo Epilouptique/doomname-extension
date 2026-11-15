@@ -2,13 +2,19 @@
   "manifest_version": 3,
   "name": "DoomName — Surveillance de domaines",
   "short_name": "DoomName",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Vérifiez la disponibilité d'un nom de domaine et surveillez-le en un clic, depuis n'importe quel onglet.",
   "homepage_url": "https://www.doomname.com",
   "browser_specific_settings": {
     "gecko": {
       "id": "extension@doomname.com",
-      "strict_min_version": "128.0"
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "personallyIdentifyingInfo",
+          "browsingActivity"
+        ]
+      }
     }
   },
   "icons": {
@@ -31,14 +37,26 @@
     "open_in_tab": true
   },
   "background": {
-    "scripts": ["background/background.js"],
+    "scripts": [
+      "background/background.js"
+    ],
     "type": "module"
   },
-  "permissions": ["storage", "tabs", "contextMenus", "notifications", "alarms"],
-  "host_permissions": ["https://www.doomname.com/*"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "contextMenus",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://www.doomname.com/*"
+  ],
   "commands": {
     "watch-current-domain": {
-      "suggested_key": { "default": "Alt+Shift+D" },
+      "suggested_key": {
+        "default": "Alt+Shift+D"
+      },
       "description": "Surveiller le domaine de l'onglet actif"
     }
   }

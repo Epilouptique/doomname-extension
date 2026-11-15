@@ -133,20 +133,30 @@ function refreshBadge() {
 
 /* ─── Rendu des résultats ─────────────────────────────────────────────────── */
 
+/* Construction DOM sans innerHTML : les analyseurs des stores signalent toute
+   affectation à innerHTML, même avec un contenu statique. */
+function el_(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text != null) node.textContent = text;
+  return node;
+}
+
+function resultRow(cls, dotCls, domain, subText, subCls) {
+  const row = el_('div', `result ${cls}`);
+  const main = el_('div', 'result-main');
+  main.append(
+    el_('div', 'result-domain', domain),
+    el_('div', `result-sub${subCls ? ' ' + subCls : ''}`, subText),
+  );
+  row.append(el_('span', `dot ${dotCls}`), main);
+  return row;
+}
+
 function renderResult(domain, result) {
   const s = statusOf(result);
   const sub = subtitle(result);
-
-  const row = document.createElement('div');
-  row.className = `result ${s.cls}`;
-  row.innerHTML = `
-    <span class="dot ${s.dot}"></span>
-    <div class="result-main">
-      <div class="result-domain"></div>
-      <div class="result-sub ${sub.cls}"></div>
-    </div>`;
-  row.querySelector('.result-domain').textContent = domain;
-  row.querySelector('.result-sub').textContent = sub.text;
+  const row = resultRow(s.cls, s.dot, domain, sub.text, sub.cls);
 
   const btn = document.createElement('button');
   bindWatchButton(btn, domain, result);
@@ -155,20 +165,11 @@ function renderResult(domain, result) {
 }
 
 function renderPending(domain) {
-  const row = document.createElement('div');
-  row.className = 'result pending';
-  row.innerHTML = '<span class="dot dot-grey"></span><div class="result-main"><div class="result-domain"></div><div class="result-sub">Vérification…</div></div>';
-  row.querySelector('.result-domain').textContent = domain;
-  return row;
+  return resultRow('pending', 'dot-grey', domain, 'Vérification…');
 }
 
 function renderError(domain, message) {
-  const row = document.createElement('div');
-  row.className = 'result error';
-  row.innerHTML = '<span class="dot dot-amber"></span><div class="result-main"><div class="result-domain"></div><div class="result-sub warn"></div></div>';
-  row.querySelector('.result-domain').textContent = domain;
-  row.querySelector('.result-sub').textContent = message;
-  return row;
+  return resultRow('error', 'dot-amber', domain, message, 'warn');
 }
 
 /* ─── Recherche ───────────────────────────────────────────────────────────── */

@@ -85,27 +85,31 @@ function subItem(sub) {
   return item;
 }
 
+/** Remplace le contenu d'une zone par un message simple, sans innerHTML. */
+function setNotice(box, message) {
+  const p = document.createElement('p');
+  p.className = 'desc';
+  p.textContent = message;
+  box.replaceChildren(p);
+}
+
 async function loadSubs() {
   const box = $('subs');
   if (!settings.email) {
-    box.innerHTML = '<p class="desc">Renseignez votre e-mail pour afficher vos surveillances.</p>';
+    setNotice(box, 'Renseignez votre e-mail pour afficher vos surveillances.');
     return;
   }
-  box.innerHTML = '<p class="desc">Chargement…</p>';
+  setNotice(box, 'Chargement…');
   try {
     const subs = await listSubscriptions(settings.email);
     box.replaceChildren();
     if (!subs.length) {
-      box.innerHTML = '<p class="desc">Aucun domaine surveillé pour le moment.</p>';
+      setNotice(box, 'Aucun domaine surveillé pour le moment.');
       return;
     }
     subs.forEach((s) => box.appendChild(subItem(s)));
   } catch (err) {
-    box.replaceChildren();
-    const p = document.createElement('p');
-    p.className = 'desc';
-    p.textContent = err instanceof ApiError ? err.message : 'Impossible de charger la liste.';
-    box.appendChild(p);
+    setNotice(box, err instanceof ApiError ? err.message : 'Impossible de charger la liste.');
   }
 }
 

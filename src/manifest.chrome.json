@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "DoomName — Surveillance de domaines",
   "short_name": "DoomName",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Vérifiez la disponibilité d'un nom de domaine et surveillez-le en un clic, depuis n'importe quel onglet.",
   "homepage_url": "https://www.doomname.com",
   "icons": {
