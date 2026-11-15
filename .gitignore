@@ -3,3 +3,7 @@ node_modules/
 *.zip
 *.xpi
 .DS_Store
+
+# Contexte de travail local, non versionné
+CLAUDE.md
+.claude/
