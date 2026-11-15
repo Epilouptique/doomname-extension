@@ -6,10 +6,12 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ICON = os.path.join(ROOT, 'icons', 'icon-512.png')
+# Logo officiel DoomName (globe + viseur). Le viseur simplifié de icons/ est
+# réservé à l'icône de la barre d'outils, où le globe serait illisible.
+ICON = os.path.join(ROOT, 'assets', 'doomname-logo-512.png')
 OUT = os.path.join(ROOT, 'docs', 'store')
 
-BG = (249, 249, 248)
+BG = (255, 255, 255)
 TEXT = (26, 26, 24)
 MUTED = (107, 107, 103)
 ACCENT = (217, 119, 87)
