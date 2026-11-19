@@ -3,6 +3,9 @@
 Vérifier la disponibilité d'un nom de domaine et le mettre sous surveillance
 en un clic, sans quitter l'onglet en cours.
 
+**Installer** — [Firefox](https://addons.mozilla.org/addon/doomname-surveillance-domaines/)
+· Chrome : en cours de revue sur le Chrome Web Store.
+
 Front-end seul : l'extension s'appuie sur l'API publique de
 [doomname.com](https://www.doomname.com) (`/api/check`, `/api/manage/*`).
 Aucune clé API n'est nécessaire.
